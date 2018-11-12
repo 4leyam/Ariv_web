@@ -1,0 +1,54 @@
+ <style type="text/css">
+        .resultat{
+            padding: 5px;
+            margin-bottom: 35px;
+        }
+
+        table th{
+            width: 150px;
+            text-align: center;
+        }
+
+        table tbody tr{
+            background-color: white;
+        }
+    </style>
+    <div class="wrapper">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                Comparateur de prix
+            </div>
+            <div class="panel-body">
+                {{ form_start(comparateurForm) }}
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Depart</label><br>
+                            {{ form_row(comparateurForm.origine) }}
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="text">Arriver</label><br>
+                            {{ form_row(comparateurForm.destination) }}
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="date">Date</label><br>
+                            {{ form_row(comparateurForm.date) }}
+                            <div id="calendarMain1"></div>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="time">Max Budget</label><br>
+                            {{ form_row(comparateurForm.prix) }}
+                        </div>
+                        <br>
+                        {{ form_row(comparateurForm.valider) }}
+                    </div>
+                {{ form_end(comparateurForm) }}
+
+                {#<br><br>#}
+
+                {#<h3 style="text-align: center">Résultat: Ville de depart à Ville d'arriver</h3>#}
+
+                {#<br> <br>#}
+            </div>
+        </div>
+    </div>

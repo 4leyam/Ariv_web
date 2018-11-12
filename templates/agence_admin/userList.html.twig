@@ -1,0 +1,59 @@
+<br>
+<br>
+<br>
+<br>
+
+<div id='genListe' class="col-md-10">
+    <div class="panel-default">
+
+        <div class="panel-heading">
+            Utilisateur
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover table-condensed thead-dark">
+
+                <thead class="thead-dark">
+
+                <tr>
+                    {% for item in headList %}
+                        <th scope="col">{{ item }}</th>
+                    {% endfor %}
+                </tr>
+
+                </thead>
+
+                <tbody id="listeContente">
+                {% for user in users %}
+                    <tr>
+                        <th scope='col'>{{ user.username }}</th>
+                        <th scope='col'>{{ user.prenom }}</th>
+                        <th scope='col'>{{ user.emaiId }}</th>
+                        <th scope='col'>{{ user.role|last }}</th>
+                        <th scope='col'>
+                            {% for role in authorisations %}
+                                {% if not loop.last and not loop.first %}
+                                    <a class="btn btn-lg btn-warning" href="
+                                    {{
+                                        path('accesOP' , {
+                                            'token': attribute(tokens , loop.index0) ,
+                                            'row':user.id
+                                        })
+                                    }}">
+                                        {{ role }}
+                                    </a><br>
+                                {% endif %}
+                            {% endfor %}
+                        </th>
+
+                    </tr>
+                {% else %}
+                    <p>
+                        Entrez une adresse correspondante a un utilisateur afin de Fournir ou retirer les acces
+                    </p>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

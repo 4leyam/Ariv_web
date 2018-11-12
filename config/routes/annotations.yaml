@@ -1,0 +1,8 @@
+controllers:
+    resource: ../../src/Controller/backend
+    type: annotation
+
+agence:
+    type: rest
+    resource: 'restApi.yaml'
+

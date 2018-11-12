@@ -1,0 +1,40 @@
+<div class="panel panel-success ">
+    <div class="panel-heading">
+        <h5 class="panel-title">Presentation de l'agence {{ agence.nomAgence }}</h5>
+    </div>
+    <div class=" panel-body">
+
+        <div class="container col-md-2 ">
+            <hr>
+            <img src="{{ asset('assets/images/agences/'~agence.agenceLogo) }}" alt="{{ agence.id }}"
+                 class="round" width="180" height="180" id="agence_logo">
+        </div>
+
+        <div class="col-md-5 text-justify ">
+            <hr>
+            <form class="form-horizontal">
+                <fieldset>
+                    <h6>Nom:</h6><b> {{ agence.nomAgence }}</b><br>
+                    <h6>Adresse:</h6> <b> {{ agence.adresseAgence }}</b><br>
+                    <h6>Telephone: </h6> <b> {{ agence.contactAgence }}</b><br>
+                    <h6>email: </h6> <b>{{ agence.emailAgence }}</b><br>
+                    <h6>a propos de l'agence: </h6> <b> {{ agence.plusInfo }}</b><br>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-md-5">
+            {#ensuite les commmentaires#}
+            {{ include('one_agence/commentaire.html.twig') }}
+        </div>
+
+    </div>
+</div>
+
+<script src="config/ajax.js" type="text/javascript"></script>
+<script
+        type="text/javascript">
+    var img = document.querySelector("#agence_logo");
+    getImage(img.alt, "agence", "#agence_logo");
+</script>
+
+

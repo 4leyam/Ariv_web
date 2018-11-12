@@ -1,0 +1,48 @@
+</ul>
+
+    <ul class="nav navbar-nav navbar-left ">
+        <!--TODO remplacer les actions qui correspondent-->
+        {% if searchForm is defined %}
+            {{ form_start(searchForm , {'action' :path('summary') , 'attr' : { 'class' : 'navbar-form navbar-left'}}) }}
+            <div class="form-group">
+
+                {{ form_row(searchForm.search , {'label' : false , 'attr':{'placeholder' : 'nom agence' , 'class':'form-control '}}) }}
+            </div>
+            {#{{ form_row(searchForm.submit , {'label' : 'Rechercher' , 'attr' : { 'class' : 'btn btn-default'}}) }}#}
+            {{ form_end(searchForm) }}
+        {% endif %}
+        <!--fermeture des precedente pour ouvrire une nouvelle-->
+        <li class="{{ page == 'agences' ? 'active' }}">
+
+            <a href="{{ path('agences') }}">Agences</a>
+
+        </li>
+    </ul>
+
+<ul class="nav navbar-nav navbar-right">
+
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                        <!--TODO inclure les elements de menu qui ne sont disponible que si l'on est connecte-->
+                                        {% if is_granted('ROLE_USER') %}
+    {% if is_granted('ROLE_COMPAGNY_ADMIN') %}
+
+    <li class="dropdown {{ page == 'departAdmin' ? 'active' }}{{ page == 'adminAgence' ? 'active' }}">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administration <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <a href="{{ path('agence_admin') }}">
+                    Administrer les Agences
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a  href="{{ path('depart_admin') }}">
+                    Administrer les departs
+                </a>
+            </li>
+        </ul>
+
+    </li>
+    {% endif %}
+     {% endif %}
+   {% endif %}

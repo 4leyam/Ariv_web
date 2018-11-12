@@ -1,0 +1,138 @@
+
+<div class="starter-template">
+                <ul class="nav nav-tabs">
+                    {#on affiche toutes les dates#}
+                    {% for key in dateTitle|keys %}
+                    <li class="{{ loop.index0 == 0? 'active' }}">
+                        <a data-toggle="tab" href="#{{ key }}">
+                           {{ key }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="panel panel-warning tab-content">
+                    {#on affiche la liste des departs par rapport a toutes les dates#}
+                    {% set active , ralonge_index  = true , 0 %}
+                    {% for key, departs in dateTitle %}
+                        <div class="tab-pane {{ active?'in active' }} {% set active = false %}" id="{{ key }}">
+                            <div class="jumbotron-fluid">
+                                <table class="table table-hover table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <span class="glyphicon glyphicon-picture glifcol"></span>
+                                                Depart
+                                                Description
+                                            </th>
+                                            <th>
+                                                <span class="glyphicon glyphicon-road glifcol"></span>
+                                                localites
+                                            </th>
+                                            <th>
+                                                <span class="glyphicon glyphicon-info-sign glifcol"></span>
+                                                informations
+                                            </th>
+                                            <th>
+                                                <span class="glyphicon glyphicon-shopping-cart glifcol"></span>
+                                                Actions
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for depart in departs %}
+                                            <tr>
+                                            <th><img class="roundedRect" src="{{ asset('assets/images/departs/'~depart.imageBus) }}"
+                                                     alt="{{ depart.id }}" height="115" width="190"
+                                                     id="depart_"{{ depart.id }}>
+                                            </th>
+                                            <th>
+                                                <h6 class="card-title">{{ "de "~depart.origine }}</h6>
+                                                <br>
+                                                <h6 class="card-title">{{ "pour "~depart.destination }}</h6>
+                                            </th>
+                                            <th>
+
+                                                <em>{{ "Formalite: "~depart.formalite|date('H:i:s') }}</em><br>
+                                                <em>{{ "Depart: "~depart.depart|date('H:i:s')}}</em><br>
+                                                <em>{{ "Places restante: "~depart.placeRestante}}</em><br>
+                                                <em>{{ "tarif adult: "~depart.tarifAdult}}</em><br>
+                                                <em>{{ "tarif enfant: "~depart.tarifEnfant}}</em>
+
+                                            </th>
+                                            <th>
+                                                {% if  is_granted('ROLE_AGENCE_ADMIN') %}
+                                                    {% if allow is defined and allow %}
+                                                        {#formulaire qui permet d'afficher la liste des transactions#}
+                                                        <form action="{{ path('bookings') }}" method="post" name="bookings">
+                                                            <input type="text" id="idDepart" name="idDepart" hidden="hidden"
+                                                                   value='{{ depart.id }}'>
+                                                            <input type="submit" class="btn btn-outline-light"
+                                                                   value='liste des transactions'>
+                                                        </form>
+                                                        <div  >
+                                                            {#ce boutton n'est visible que dans la page d'administration de depart.#}
+                                                            {% if page == "departAdmin" %}
+
+                                                                {% set ralonge_form = attribute( ralongeList , ralonge_index) %}
+                                                                {% if ralonge_form is defined  %}
+                                                                {{ form_start(ralonge_form) }}
+                                                                {{ form_row(ralonge_form.departId , {'value':depart.id}) }}
+                                                                {{ form_row(ralonge_form.ralonger) }}
+                                                                {{ form_row(ralonge_form.alertExtraData) }}
+                                                                {{ form_end(ralonge_form) }}
+                                                                {% endif %}
+                                                                {% set ralonge_index = ralonge_index + 1 %}
+                                                            {% endif %}
+
+                                                        </div>
+                                                    {% endif %}
+                                                {% else %}
+                                                <a class="btn btn-lg btn-success" href="#">Reserver</a>
+                                                <a class="btn btn-lg btn-info" href="#">Acheter</a>
+                                                {% endif %}
+
+                                            </th>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="panel panel-warning col-md-10">
+                            <h5 class="text-center">
+                                Aucune correspondance de Depart Trouvee par ici :)
+                            </h5>
+                        </div>
+
+                {% endfor %}
+            </div>
+        </div>
+
+<!-- Modal -->
+{% if alertDialogContent is defined  %}
+{{ alertDialogContent | raw}}
+{% endif %}
+
+
+<script type="text/javascript">
+$('#confirmModal').on('focusin' , function (event) {
+
+    $('#AlertDialogID').off('click');
+
+    $('#AlertDialogID').on('click' , function () {
+        var button = $(event.relatedTarget);
+        var destination = button.data('whatever');
+        var tmp = button.attr("name");
+        button.prop('type' , 'submit');
+        button.trigger('click');
+        console.log(destination);
+        console.log(button.closest());
+    });
+})
+
+
+</script>
+
+

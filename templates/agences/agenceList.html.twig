@@ -1,0 +1,119 @@
+{% extends '/app/app_base.html.twig' %}
+
+{% block title %}Agences | Filtre sont la pour vous accompagner dans vos recherches de tickets{% endblock %}
+
+{% block body %}
+    <style>
+        .checked {
+            color: gold;
+        }
+        .unchecked {
+            color: #888;
+        }
+         .cover {
+             padding: 0px;
+             margin: 0px;
+             width: 100%;
+
+         }
+
+        .cover-container {
+            /* The image used */
+            background-image: url("{{ asset('assets/images/home.png') }}");
+
+            /* half height */
+            height: 30%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            max-width: 200em;
+
+        }
+        .center {
+            margin: auto;
+            width: 60%;
+            padding-top:150px;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+    </style>
+
+    <div class="center">
+
+        {#on inclu le comparateur de prix#}
+
+        {{
+            include('comparateur/comparateur.html.twig' , {
+                'comparateurForm':comparateur.formComparateur
+            })
+        }}
+
+        {#<!--on inclu le filtre d'affichage de la liste des agences-->#}
+
+        {{ include('agences/agenceFilter.html.twig' , {'form' : form ,  'classementDescription' : classementDescription}) }}
+
+        {% if comparateur.submitted %}
+
+            {% set dateTitle , departs = comparateur.dateTitle , comparateur.departs %}
+            {#on inclu les resltats de la recherche si le formulaire a ete submit#}
+            {{
+                include('recycled/depart.html.twig' ,
+                    {
+                        'dateTitle' : dateTitle ,
+                        "departs" : departs
+                    })
+            }}
+
+
+        {% else %}
+
+            <div class="row agenceSpace">
+                <div class="col-md-12">
+                    {% for agence in agences %}
+                        <div class="col-md-3">
+                            <div class="panel panel-default well-sm">
+
+                                <a href="{{ path('one_agence', {'id': agence.id }) }}">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <img src="{{ asset('assets/images/agences/'~agence.agenceLogo) }} " alt="{{ agence.id }}"
+                                                 class="img-thumbnail" id="agence_{{ agence.id }}">
+                                            <script type="text/javascript">
+                                                id_destination = "#agence_"+{{ agence.id }};
+                                                img = document.querySelector(id_destination);
+                                                getImage(img.alt, "agence", id_destination);
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 text-justify text-dark">
+                                            {% for i in 0..agence.avis-1 if agence.avis != 0%}
+                                                <span class="fa fa-star checked"></span>
+                                            {% endfor %}
+                                            {% for i in agence.avis..4 if agence.avis != 5 %}
+                                                <span class="fa fa-star unchecked"></span>
+                                            {% endfor %}
+                                            <br>
+                                            <strong class="unchecked">{{ agence.nomAgence }}</strong><br>
+                                            <span class="badge badge-info badge-pill"><?= '0 avis' ?></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        {% endif %}
+    </div>
+
+
+{% endblock %}

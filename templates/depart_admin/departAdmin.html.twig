@@ -1,0 +1,148 @@
+{% extends '/recycled/abstractMenuNContentTemplate.html.twig' %}
+
+{% block title %}Administrez les Departs de Votre compagnie{% endblock %}
+
+{% set ParentOnglets , ParentCurrentTab , extra = onglets , currentTab , extra %}
+ {% set extraInfo = extra.extraInfo is defined and not extra.extraInfo is null ? extra.extraInfo %}
+
+{% block content %}
+
+    {#dans ce bloc sont reecrits tous les contenus relationel (tous les contenus ayant un lien avec un quelquonc onglet)#}
+
+    <div>
+    <div class="container fluid">
+        <div class="row">
+            {% set sideForm , form = attribute(content , 'sideForm') , attribute(content , 'centralForm')%}
+            {% set tab = centralForm.dataTab is defined ? centralForm.dataTab : centralForm.tab.vars.value  %}
+
+
+            {% if tab == 3 %}
+                {#allow: boolean permettant de determiner si l'utilisateur est bien dans sa zone d'operation#}
+                {#dans la zone ou ses permissions sont appliquees#}
+
+
+                {{ include('depart_admin/history.html.twig' ,
+                    {
+                        "agenceList" : attribute(content , 'sideForm') ,
+                        "departs" : centralForm.dataContent.departs ,
+                        "dateTitle":centralForm.dataContent.titles,
+                        "allow":allow,
+                        "ralongeList":centralForm.dataContent.ralongeListForm,
+                        "alertDialogContent":centralForm.dataContent.alertDialogContent
+                    }
+                )}}
+
+            {% elseif tab == 4 %}
+
+            {% else %}
+                {%  if tab == 1 or tab == 2 %}
+                    <div class="col-md-3">
+                        <p>
+                            {{ form_start(sideForm) }}
+                            <label for="select_agence">
+                                <h6>Selectionnez l'agence</h6>
+                            </label>
+                            {{ form_widget(sideForm) }}
+                            {{ form_end(sideForm) }}
+                        </p>
+                    </div>
+                    <div class="col-md-7">
+                    {#quand il s'agit de la modification ou de la suppression la col est divisee en 5 / 7#}
+                    {#d'ou la div au dessus#}
+                {% endif %}
+                {% if tab == 0 %}
+                {#pour l'ajout pas de division de colon d'ou col-md-10#}
+                <div class="col-md-10">
+            {% endif %}
+                {{ form_start(form) }}
+                <div class="row">
+                    {#premier bloc image et enregistrement de fichier#}
+                    <div class="col-md-6">
+                        {% set path = (form.imageBus.vars.value|length)? form.imageBus.vars.value : 'bus.png' %}
+                        <img src="{{ asset('assets/images/departs/'~path ) }}" alt="" class="roundedRect"
+                             id="desc_image_<?= $tab ?>" height="115" width="190">
+                        <br><br><br>
+                        {#les nouveux departs doivent imperativement avoir des images de bus#}
+                        {#TODO decider si ce champ est obligatoire ou pas#}
+                        {{ form_row(form.imageBus) }}
+
+                    </div>
+                    {#second block#}
+                    <div class="col-md-6">
+                        <div class="col-xs-12">
+                            {% if tab == 0 %}
+                                <p>
+                                    <label for="liste_agence">selectionner l'agence</label><br>
+                                    {{ form_row(form.agence) }}
+                                </p>
+                            {% endif %}
+
+                            <div class="bootstrap-timepicker">
+                                <label>Heure de formalite</label><br>
+                                {{ form_row(form.formalite) }}
+                            </div>
+
+                            <div class="bootstrap-timepicker">
+                                <label>Heure de Depart</label><br>
+                                {{ form_row(form.depart) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-xs-12">
+                            {{ form_row(form.origine) }}
+                            {{ form_row(form.destination) }}
+                            {{ form_row(form.placeInit) }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-xs-12">
+                            {{ form_row(form.tarifAdult) }}
+                            {{ form_row(form.tarifEnfant) }}
+                            <label>Date du voyage</label><br>
+                            {{ form_row(form.dateDepart) }}
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <p class="text-right">
+                        {% if tab == 0 %}
+                            <input class="btn btn-success btn-lg" type="submit" title="Ajouter" value="Ajouter">
+                        {% elseif tab == 1 %}
+                            <button type="button" class="btn btn-warning btn-lg"
+                                    onclick="depart_trigger('{{ form.id.vars.value }}' , {{  form.placeInit.vars.value is defined ?form.placeInit.vars.value:'' }})">
+                                Modifier
+                            </button>
+                        {% elseif tab == 2 %}
+                            <button type="button" class="btn btn-danger btn-lg"
+                                    onclick="delete_dep('{{ form.id.vars.value }}')">
+                                Supprimer
+                            </button>
+                        {% endif %}
+                    </p>
+                </div>
+                {{ form_end(form) }}
+                </div>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+
+    {#pas tres dynamique mais ca fait l'affaire permet de lancer le script qu'en cas de besoin #}
+    {#notement pour les formulaires de suppression et de modif#}
+    {% if tab == 1 or tab == 2 %}
+        <script type="text/javascript">
+            //on lance la fonction js qui permettra de verouiller la modification des departs au cas ces derniers sont deja en cours de transaction.
+            $(document).ready(function () {
+                lockIfIsUsed('{{ form.id.vars.value is defined ? form.id.vars.value  }}' , '{{ tab }}');
+            });
+        </script>
+    {% endif %}
+
+{% endblock %}

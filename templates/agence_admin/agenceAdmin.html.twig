@@ -1,0 +1,136 @@
+{% extends '/recycled/abstractMenuNContentTemplate.html.twig' %}
+
+{% block title %}Administrez les Departs de Votre compagnie{% endblock %}
+
+{% set ParentOnglets , ParentCurrentTab = onglets , currentTab %}
+
+{% block content %}
+
+    {#dans ce bloc sont reecrits tous les contenus relationel (tous les contenus ayant un lien avec un quelquonc onglet)#}
+
+    <div>
+        <div class="container fluid text-justify">
+            <div class="row">
+                {% set extraInfo = extra.extraInfo is defined and not extra.extraInfo is null ? extra.extraInfo %}
+                {% set sideForm , form = attribute(content , 'sideForm') , attribute(content , 'centralForm')%}
+                {% set tab = centralForm.dataTab is defined ? centralForm.dataTab : centralForm.tab.vars.value  %}
+
+
+                {% if tab == 3 %}
+                    {#index de l'onglet de l'attribution des acces#}
+                    {% set data = attribute(form , 'dataContent') %}
+                    {{
+                        include('agence_admin/accessProvider.html.twig' ,
+                            {
+                                "headList":data.headList ,
+                                "authorisations":data.authorisations,
+                                "form" : data.form ,
+                                "tokens":data.rolesTokens,
+                                "users" : data.users
+                            }
+                        )
+                    }}
+                {% elseif tab == 4 %}
+
+                    {#index de l'onglet de l'invitation#}
+                    {% set data = attribute(form , 'dataContent') %}
+                    {{
+                    include('agence_admin/sendInvitation.html.twig' ,
+                        {
+                            "sideForm": sideForm ,
+                            "form" : data.form
+
+                        }
+                    )
+                    }}
+
+                {% else %}
+
+                    <div class="col-md-3">
+                        {% if tab == 1 or tab == 2 %}
+                            {#car le select d'agence ne s'affiche que quand il faut modifier ou supprimer.#}
+                            <p>
+                                {{ form_start(sideForm) }}
+
+                                    <label for="select_agence">
+                                        <h4>
+                                            Selectionnez l'agence
+                                        </h4>
+                                    </label>
+                                    {{ form_widget(sideForm) }}
+                                {{ form_end(sideForm) }}
+                            </p>
+                        {% endif %}
+
+                        <div class="text-dark">
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="desc_image">LOGO</label>
+                                        {% set path = (form.agenceLogo.vars.value|length)? form.agenceLogo.vars.value : 'rt_b.jpg' %}
+                                        <div class="panel panel-warning">
+                                            <img src="{{ asset('assets/images/agences/'~path ) }}"
+                                                 alt="{{ form.id.vars.value is defined ?form.id.vars.value }}"
+                                                 class="img-thumbnail"
+                                                 id="agence_logo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-7">
+                        {{ form_start(form) }}
+                            <div class="row">
+                                <div class="col-md-3">
+                                    {{ form_row(form.agenceLogo) }}
+                                </div>
+                            </div>
+
+                            <label for="nom">Nom :</label><br>
+                            {{ form_row(form.nomAgence) }}<br>
+                            <label for="adresse">Adresse:</label><br>
+                            {{ form_row(form.adresseAgence) }}<br>
+                            <label for="tel">Telephone :</label><br>
+                            {{ form_row(form.contactAgence) }}<br>
+                            <label for="email">Email :</label><br>
+                            {{ form_row(form.emailAgence) }}<br>
+                            <label for="generale">a propos de l'agence:</label><br>
+                            {{ form_row(form.plusInfo) }}<br>
+                        {{ form_end(form) }}
+
+                        <p>
+                            {% if tab == 0 %}
+                                <button type="button" class="btn btn-success btn-lg"
+                                        onclick="add_agence()">
+                                    Ajouter
+                                </button>
+                            {% elseif tab == 1 %}
+                                <button type="button" class="btn btn-warning btn-lg"
+                                        onclick="agence_trigger()">
+                                    Modifier
+                                </button>
+                            {% elseif tab == 2 %}
+                                <button type="button" class="btn btn-danger btn-lg"
+                                        onclick="deleteAgence('{{ form.nomAgence.vars.value }}')">
+                                    Supprimer
+                                </button>
+                            {% endif %}
+                        </p>
+                    </div>
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+    {#<script src="{{ asset("assets/js/ajax.js") }}" type="text/javascript"></script>#}
+    {#<script type="text/javascript">#}
+        {#var img = document.querySelector("#agence_logo");#}
+        {#getImage(img.alt, "agence", "#agence_logo");#}
+    {#</script>#}
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+# Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html
+fos_rest:
+#    allowed_methods_listener:  true
+    #route_loader is a listener which set the default setting of our rest Url, it define
+    #data format extention, and the de default type
+    routing_loader:
+        #set the default fetching data format to json
+        default_format: json
+        #means to include or not the format of
+        include_format: false
+    param_fetcher_listener:
+        enabled: true
+    versioning:
+        enabled: true
+    view:
+        #
+        view_response_listener:  true
+#    exception:
+#        codes:
+#            App\Exception\MyException: 403
+#        messages:
+#            App\Exception\MyException: Forbidden area.
+    format_listener:
+         enabled: true
+         rules:
+            - { path: ^/api, prefer_extension: true, fallback_format: json, priorities: [json] }

@@ -1,0 +1,40 @@
+
+<div class="col-md-10">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h5 class="panel-title">Selectionnez l'agence et la periode afin de voir les departs</h5>
+        </div>
+        <div class=" panel-body">
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    {{ form_start(agenceList) }}
+                    {{ form_widget(agenceList) }}
+                    <br>
+                    {{ form_end(agenceList) }}
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-10">
+        {#allow: boolean permettant de determiner si l'utilisateur est bien dans sa zone d'operation#}
+        {#dans la zone ou ses permissions sont appliquees#}
+        {{ include('recycled/depart.html.twig' ,
+            {
+                'departs' : departs,
+                "dateTitle" : dateTitle,
+                "allow":allow,
+                "ralongeList":ralongeList,
+                "alertDialogContent":alertDialogContent
+            })
+        }}
+
+    </div>
+</div>

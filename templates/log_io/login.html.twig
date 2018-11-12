@@ -1,0 +1,85 @@
+{% extends '/app/app_base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+
+    <main role="main" class="inner cover text-justify" id="pope">
+
+        <style>
+
+            .cover {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+
+            }
+
+
+
+            .cover-container {
+                /* The image used */
+                background-image: url("{{ asset('assets/images/agences.png') }}");
+
+                /* half height */
+                height: 25%;
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                max-width: 200em;
+
+            }
+            .center {
+                margin: auto;
+                width: 50%;
+                padding: 100px;
+            }
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+            .mdp {
+                margin: 20px;
+                color: blue;
+            }
+
+
+
+        </style>
+
+        {% if error %}
+            {{ include('/app/alert.html.twig'
+                , {'type':'danger' , 'message':'Identifiants Incorrect Veuillez svp les revoir' , 'close':true}) }}
+        {% endif %}
+            <div class="center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Connexion
+                    </div>
+                    <div class="panel-body">
+                        <div class="well">
+                            {{ form_start(form) }}
+                            <label for="nom" >Pseudonyme ou Adresse Mail: </label><br>
+                            {{ form_row(form.emaiId , { 'attr': {'class': 'form-control'} }) }}
+                            <label for="password" >Mot de passe</label><br>
+                            {{ form_row(form.password ,  { 'attr': {'class': 'form-control'} }) }}
+                            <br>
+                            <div class="row ">
+                                <input type="submit" class="btn btn-lg " value="Se connecter">
+                                <a class="mdp" href="{{ path('agences') }}">Mot de passe oublie?</a>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+    </main>
+
+{% endblock %}

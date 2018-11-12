@@ -1,0 +1,125 @@
+{% extends '/app/app_base.html.twig' %}
+
+{% block title %}Liste des transactions{% endblock %}
+
+{% block body %}
+
+    <style>
+
+        .cover {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+
+        }
+
+        .cover-container {
+            /* The image used */
+            background-image: url("{{ asset('assets/images/home.png') }}");
+
+            /* half height */
+            height: 30%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            max-width: 200em;
+
+        }
+        .center {
+            margin: auto;
+            width: 85%;
+            padding-top: 170px;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+    </style>
+
+
+    {% if idDepart is defined %}
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                {#getReserviste('{{ idDepart }}');#}
+                getReserviste('158');
+
+            });
+
+
+        </script>
+    {% endif %}
+
+
+    <div class="center">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                LISTE DES TRANSACTIONS
+            </div>
+
+            <div class="panel-body">
+                <div id='liste_transaction' hidden="hidden">
+                    <table class="table table-hover table-condensed thead-dark">
+
+                        <thead class="thead-dark">
+
+                        <tr>
+
+                            <th scope="col">
+                                <span class="glyphicon glyphicon-magnet glifcol" aria-hidden="true"></span>
+                                index
+                            </th>
+                            <th scope="col">
+                                <span class="glyphicon glyphicon-user glifcol" aria-hidden="true"></span>
+                                Nom(s)
+                            </th>
+                            <th scope="col">
+                                <span class="glyphicon glyphicon-user glifcol" aria-hidden="true"></span>
+                                Prenom(s)
+                            </th>
+                            <th scope="col">
+                                <span class="glyphicon glyphicon-earphone glifcol" aria-hidden="true"></span>
+                                contact
+                            </th>
+                            <th scope="col glifcol">
+                                <span class="glyphicon glyphicon-phone-alt glifcol" aria-hidden="true"></span>
+                                contact du proche
+                            </th>
+                            <th scope="col">
+                                <span class="glyphicon glyphicon-leaf glifcol" aria-hidden="true"></span>
+                                sexe
+                            </th>
+                            <th scope="col">
+                                <span class="glyphicon glyphicon-calendar glifcol" aria-hidden="true"></span>
+                                Date
+                            </th>
+                            <th scope="col">
+                                <span class="glyphicon glyphicon-random glifcol" aria-hidden="true"></span>
+                                Transaction(Type)
+                            </th>
+
+                        </tr>
+
+                        </thead>
+                        <tbody id="reserviste_rows">
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+                <p id="message" class="font-weight-light-dark text-center">
+                    <b> chargement... </b>
+                <p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

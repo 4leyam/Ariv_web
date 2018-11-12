@@ -1,0 +1,24 @@
+<div class="col-md-10">
+    <div class="panel">
+        <div class="panel-body">
+            <div class="form-control">
+                {{ form_start(sideForm) }}
+                <div class="row">
+                    <div class="col-md-4">
+                        {{ form_widget(sideForm) }}
+                    </div>
+                {{ form_end(sideForm) }}
+                {{ form_start(form) }}
+                    <div class="col-md-4">
+                        {{ form_row(form.email) }}
+                    </div>
+                    <div class="col-md-4">
+                        <br>
+                        {{ form_row(form.inviter) }}
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</div>

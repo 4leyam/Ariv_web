@@ -1,0 +1,30 @@
+
+agence:
+    type: rest
+    prefix: api
+    name_prefix: api_
+    resource: App\Controller\Rest\AgenceController
+#    host:     localhost
+
+departs:
+    type: rest
+    name_prefix: api_
+    prefix: api
+    resource: App\Controller\Rest\DepartsController
+#    parent: agences
+##    host:     localhost
+
+commentaires:
+    type: rest
+    name_prefix: api_
+    prefix: api
+    resource: App\Controller\Rest\CommentairesController
+#    host:     localhost
+#    parent: agence
+#
+#
+#nzelaUser:
+#    resource: App\Controller\Rest\NzelaUserController
+#    name_prefix: api_
+##    host:     localhost
+#    type: rest

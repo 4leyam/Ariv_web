@@ -1,0 +1,88 @@
+{% extends 'app/app_base.html.twig' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+
+    <br>
+    <br><br><br>
+    {% if error %}
+        {{ include('/app/alert.html.twig'
+            , {'type':'danger' , 'message':'Les Informations entrees ne sont pas correcte' , 'close':true}) }}
+    {% endif %}
+    <div class="panel panel-warning nwar jumbotron inner cover text-justify">
+
+        {{ form_start(form) }}
+        <br>
+
+        <div class="form-group">
+
+            <label class="custom-control-label inverser" name="name" for="pseudo">Pseudo (facultatif):
+            </label>
+            {{ form_row(form.pseudo , { 'attr': {'class': 'form-control inverser'} }) }}
+
+        </div>
+
+        <div class="form-group">
+            <label class="custom-control-label inverser" name="name" for="user_name_id">Nom:
+            </label>
+            {{ form_row(form.username , {'attr' : {'class' : 'form-control inverser'}}) }}
+        </div>
+
+
+        <div class="form-group">
+
+            <label class="custom-control-label inverser" name="prenom" for="user_prenom">Prenom:
+
+            </label>
+            {{ form_row(form.prenom , { 'attr': {'class': 'form-control inverser'} }) }}
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label class="custom-control-label inverser" name="name" for="admin_phone">Telephone:
+
+            </label>
+            {{ form_row(form.telephone , { 'attr': {'class': 'form-control inverser'} }) }}
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label class="custom-control-label inverser" name="name" for="admin_mail">email:
+            </label>
+            {{ form_row(form.emaiId , { 'attr': {'class': 'form-control inverser'} }) }}
+
+        </div>
+
+        <div class="form-group">
+
+            <label class="custom-control-label inverser" name="name" for="mdp">mot de passe:
+            </label>
+            {{ form_row(form.password , { 'attr': {'class': 'form-control inverser'} }) }}
+
+        </div>
+
+        <div class="form-group">
+
+            <label class="custom-control-label inverser" name="name" for="mdp">Confirmez le mot de passe:
+            </label>
+            {{ form_row(form.passConfirm , { 'attr': {'class': 'form-control inverser'} }) }}
+
+        </div>
+
+        <input type="submit" class="btn btn-lg btn-warning"
+               value="Valider">
+
+        <br>
+        <br>
+
+        {{ form_end(form) }}
+
+    </div>
+
+{% endblock %}

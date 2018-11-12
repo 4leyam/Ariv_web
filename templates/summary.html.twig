@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Nzela administration">
+        <meta name="author" content="aleyam">
+
+        {% block stylesheets %}{% endblock %}
+
+        {% block customstyle %}{% endblock %}
+    </head>
+    <body>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column container-fluid">
+        {% block header %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %}{% endblock %}
+    </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,55 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\NzelaUser:
+            algorithm: bcrypt
+
+    providers:
+        ariv_prov:
+            entity:
+                class: App\Entity\NzelaUser
+
+    role_hierarchy:
+        ROLE_AGENCE_ADMIN: ROLE_USER
+        ROLE_COMPAGNY_ADMIN: ROLE_AGENCE_ADMIN
+        ROLE_APP_OPERATOR_ADMIN: ROLE_COMPAGNY_ADMIN
+        ROLE_YOUNG_POPE: ROLE_APP_OPERATOR_ADMIN
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+
+            provider: ariv_prov
+
+            # activate different ways to authenticate
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            #form_login c'est la methode d'auth tout comme http_basic
+            #login_path endroit ou se situe le formulaire de connexion.
+            #check_path la route pour la verification des information du form de login
+
+            form_login:
+                login_path: logIO
+                check_path: logIO
+                username_parameter: emaiId
+                password_parameter: password
+                default_target_path: agences
+                failure_path: logFailed
+            logout:
+                path: deconnexion
+                target: logIO
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        # - { path: logIO, roles: IS_ANONYMOUSLY_AUTHENTICATED }
+         - { path: ^/admin, roles: ROLE_COMPAGNY_ADMIN }
+         - { path: ^/check, roles: ROLE_AGENCE_ADMIN }
+    access_denied_url: agences

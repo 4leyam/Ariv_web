@@ -1,0 +1,76 @@
+{% extends '/app/app_base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        .cover-container {
+            max-width: 80em;
+        }
+    </style>
+    {% if extraInfo is defined and not extraInfo is null %}
+        {% set message , type = extraInfo.message , extraInfo.type %}
+            {% if message|length %}
+                <div class="alert alert-{{ type }} alert-dismissible show" role="alert">
+                    <strong>Information</strong> {{ message }}.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+             {% endif %}
+    {% endif %}
+
+    <main role="main" class="jumbotron-fluid">
+
+
+        <div class="row">
+
+            <div class="col-md-2">
+                {#inclusion des menus#}
+                <div class="list-group">
+                    {% set contentPref = 'content_' %}
+                    {% for key in ParentOnglets|keys %}
+                        {% set form = attribute(ParentOnglets , key) %}
+                        {#TODO mettre en place le controller d'acces.#}
+                        {% set centralForm = attribute(form , 'centralForm') %}
+                        {% set tab = centralForm.tab.vars.value is defined ? centralForm.tab.vars.value : centralForm.dataTab  %}
+
+                        <a id="{{ key ~ loop.index0 }}" href="#{{ contentPref ~ loop.index0 }}"
+                           class="list-group-item list-group-item-action btn-warning {{ ParentCurrentTab == tab?'active' }} "
+                           data-toggle="list" role="tab" aria-controls="{{ contentPref ~ loop.index0 }} " data-style="btn-warning">
+                            <span class="glyphicon glyphicon-flash"></span>
+                            {{ key }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class=" panel panel-warning tab-content col-md-10">
+                {% for key in ParentOnglets|keys %}
+                    {% set content = attribute(ParentOnglets , key) %}
+                    {% set form = attribute(ParentOnglets , key) %}
+                    {#TODO mettre en place le controller d'acces.#}
+                    {% set centralForm = attribute(form , 'centralForm') %}
+                    {% set tab = centralForm.tab.vars.value is defined ? centralForm.tab.vars.value : centralForm.dataTab  %}
+
+                    <div
+                        class="tab-pane {{ ParentCurrentTab == tab?'show active' }}"
+                        id="{{ contentPref ~ loop.index0 }}" role="tabpanel" aria-labelledby="{{ key ~ loop.index0 }}">
+                        {% block content %}
+
+                        {% endblock %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+
+    {% if not extra is null %}
+        {{ extra.js | raw }}
+    {% endif %}
+
+{% endblock %}

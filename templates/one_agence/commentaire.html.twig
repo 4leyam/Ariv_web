@@ -1,0 +1,35 @@
+<style>
+    .checked {
+        color: gold;
+    }
+</style>
+<br>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Commentaires
+    </div>
+    <div class="panel-body">
+        {% for commentaire in commentaires %}
+        <div style="font-size: 12px;border-bottom: 1px dotted #4a5043;margin-top: 20px">
+            <blockquote>
+                <p> <font style = "vertical-align: inherit;font-size: 12px"> {{ commentaire.commentaire }}  </font> </p>
+                <small>
+                    <cite title="Titre source">
+                        <strong>{{ commentaire.userName }}</strong> &nbsp;&nbsp;
+                        {% for i  in 0..commentaire.avis-1 if agence.avis != 0 %}
+                            <span class="fa fa-star checked" style="font-size: 10px"></span>
+                        {% endfor %}
+                    </cite>
+                </small>
+            </blockquote>
+        </div>
+        {% else %}
+            <h5>Aucun Commentaire pour l'instant.</h5>
+        {% endfor %}<br>
+
+        {#la possibilite de poster des commentaire a ete retiree jugee moins securisee#}
+
+        {#{{ form(form) }}#}
+    </div>
+
+</div>

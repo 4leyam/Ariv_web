@@ -1,0 +1,52 @@
+{% extends '/app/app_base.html.twig' %}
+
+{% block title %}compagnie: {{ agence.nomAgence }}!{% endblock %}
+{% block body %}
+
+
+    <style>
+        .cover {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+
+        }
+
+        .cover-container {
+            /* The image used */
+            background-image: url("{{ asset('assets/images/agence.png') }}");
+
+            /* half height */
+            height: 30%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            max-width: 200em;
+
+        }
+        .center {
+            margin: auto;
+            width: 90%;
+            padding-top:150px;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+    </style>
+
+
+<div class="row center">
+    <div class="col-md-12">
+        {#on inclu le template des informations sur l'agence#}
+        {{ include('one_agence/agenceInfo.html.twig' , {'agence' : agence}) }}
+        {#et ensuite les differents departs de l'agence#}
+        {{ include('recycled/depart.html.twig' , {'departs' : departs , "dateTitle" : dateTitle , 'allow' : listAllowed}) }}
+    </div>
+
+</div>
+{% endblock %}

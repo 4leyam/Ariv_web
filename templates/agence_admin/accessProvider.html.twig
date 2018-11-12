@@ -1,0 +1,30 @@
+<div class="col-md-10">
+    <div class="panel">
+        <div class="panel-body">
+            <div class="form-control">
+                {{ form_start(form) }}
+                <div class="row">
+                    <div class="col-md-3">
+                        {{ form_row(form.agence) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.email) }}
+                    </div>
+                    <div class="col-md-3">
+                        {{ form_row(form.submit) }}
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{
+    include('agence_admin/userList.html.twig' , {
+        "headList":headList ,
+        "authorisations":authorisations,
+        "rolesTokens":tokens,
+        "users":users
+    })
+}}

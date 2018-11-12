@@ -1,0 +1,8 @@
+
+<div class="alert alert-{{ type }}" role="alert">
+    {% if close %}
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    {% endif %}
+    <!--ensuite on affiche le message d'alert-->
+        {{ message }}
+</div>

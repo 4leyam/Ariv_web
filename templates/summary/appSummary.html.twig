@@ -1,0 +1,90 @@
+{% extends 'app/app_base.html.twig' %}
+
+{% block title %} {{ page }} {{ APP_NAME  }}{% endblock %}
+
+
+{% block body %}
+
+    <style>
+
+        .cover {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+
+        }
+
+        .cover-container {
+        {#/* The image used */#}
+        background-image: url("{{ asset('assets/images/agences.png') }}");
+
+            /* half height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            max-width: 200em;
+
+        }
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 100px;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .white{
+            color: white;
+        }
+
+        .light{
+            color: lightgray;
+        }
+
+
+    </style>
+
+    <main role="main" class="jumbotron-fluid"><br><br><br>
+        <div class="row">
+            {#couverture de l'application#}
+            <div class="col-md-6">
+            </div>
+            {#resume de l'application#}
+            <div class="col-md-6">
+                <h2 class="cover-heading light "><b>Faite simple, ne vous deplacez plus!</b></h2><br>
+                <h6 class="lead white">desormais depuis votre domicile, ou que ce soit votre position, vous n'etes plus oblige de vous
+                    deplacer
+                    pour l'achat de billets de voyage a l'interieur du pays. {{ APP_NAME }} vous permet de faire facilement des
+                    reservations
+                    et des tickets de bus.</h6>
+                <p class="lead">
+                    <a href="{{ asset("assets/nZela-nZela.apk") }}" class="btn btn-lg btn-warning">Telechager l'app(Android)</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+            {#resume de l'application#}
+            <div class="col-md-4">
+                <h2 class="cover-heading light "><b>Faite des Economies</b></h2><br>
+                <h6 class="lead white">Grace a {{ APP_NAME }}, depensez moins pour l'achat des tickets qui sont a prix reduit sur la plate-form,
+                    et Beneficiez
+                des tickets gratuit en effectuant un max de partage de l'applicatiion aupres de vos amis sur tous les reseaux
+                </h6>
+                <p class="lead">
+                    <a href="{{ asset("assets/nZela-nZela.apk") }}" class="btn btn-lg btn-success">Partager</a>
+                </p>
+            </div>
+            {#couverture de l'application#}
+            <div class="col-md-6">
+            </div>
+        </div>
+
+    </main>
+
+{% endblock %}
