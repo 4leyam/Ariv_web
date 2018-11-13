@@ -106,7 +106,7 @@ class AgenceController extends Controller implements ClassResourceInterface
      * @param $slug
      * @return Collection|null
      */
-    public function getCommentsAction($slug) {
+    public function getCommentairesAction($slug) {
         $agence = $this->agenceRepository->find($slug);
         return $agence->getComments();
     }

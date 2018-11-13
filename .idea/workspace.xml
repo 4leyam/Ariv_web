@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bcecd7e2-62b6-49a6-9623-82558b2217f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/payment/.github/ISSUE_TEMPLATE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/ACKNOWLEDGEMENTS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/Rakefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/braintree_init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/checkout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/ci.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/AccountUpdaterDailyReport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/AchMandate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/AddOn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/AddOnGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Address.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/AddressGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/AmexExpressCheckoutCard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/AndroidPayCard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ApplePayCard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ApplePayGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ApplePayOptions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/AuthorizationAdjustment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Base.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/BinData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ClientToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ClientTokenGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CoinbaseAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Collection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Configuration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ConnectedMerchantPayPalStatusChanged.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ConnectedMerchantStatusTransitioned.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CredentialsParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CreditCard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CreditCardGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CreditCardVerification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CreditCardVerificationGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CreditCardVerificationSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CustomerGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/CustomerSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Descriptor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Digest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Disbursement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/DisbursementDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Discount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/DiscountGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Dispute.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Dispute/EvidenceDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Dispute/StatusHistoryDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Dispute/TransactionDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/DisputeGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/DisputeSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/DocumentUpload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/DocumentUploadGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/EndsWithNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/EqualityNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Error/Codes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Error/ErrorCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Error/Validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Error/ValidationErrorCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/EuropeBankAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/Authentication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/Authorization.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/Configuration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/DownForMaintenance.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/ForgedQueryString.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/InvalidChallenge.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/InvalidSignature.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/NotFound.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/SSLCaFileNotFound.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/SSLCertificate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/ServerError.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/TestOperationPerformedInProduction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/Timeout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/TooManyRequests.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/Unexpected.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/UpgradeRequired.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Exception/ValidationsFailed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/FacilitatedDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/FacilitatorDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Gateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/GrantedPaymentInstrumentUpdate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Http.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/IbanBankAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/IdealPayment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/IdealPaymentGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Instance.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/IsNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/KeyValueNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MasterpassCard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Merchant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MerchantAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MerchantAccount/AddressDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MerchantAccount/BusinessDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MerchantAccount/FundingDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MerchantAccount/IndividualDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MerchantAccountGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MerchantGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Modification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MultipleValueNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/MultipleValueOrTextNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/OAuthAccessRevocation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/OAuthCredentials.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/OAuthGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/OAuthResult.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PaginatedCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PaginatedResult.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PartialMatchNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PartnerMerchant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PayPalAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PayPalAccountGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PaymentInstrumentType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PaymentMethod.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PaymentMethodGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PaymentMethodNonce.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PaymentMethodNonceGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Plan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/PlanGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/RangeNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ResourceCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Result/CreditCardVerification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Result/Error.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Result/Successful.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Result/UsBankAccountVerification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/RiskData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/SettlementBatchSummary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/SettlementBatchSummaryGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/SignatureService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Subscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Subscription/StatusDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/SubscriptionGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/SubscriptionSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Test/CreditCardNumbers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Test/MerchantAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Test/Nonces.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Test/Transaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Test/TransactionAmounts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Test/VenmoSdk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/TestingGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/TextNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/ThreeDSecureInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/AddressDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/AmexExpressCheckoutCardDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/AndroidPayCardDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/ApplePayCardDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/CoinbaseDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/CreditCardDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/CustomerDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/EuropeBankAccountDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/IdealPaymentDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/LineItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/MasterpassCardDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/PayPalDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/StatusDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/SubscriptionDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/UsBankAccountDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/VenmoAccountDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Transaction/VisaCheckoutCardDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/TransactionGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/TransactionLineItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/TransactionLineItemGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/TransactionSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/TransparentRedirect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/TransparentRedirectGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/UnknownPaymentMethod.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/UsBankAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/UsBankAccountGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/UsBankAccountVerification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/UsBankAccountVerificationGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/UsBankAccountVerificationSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Util.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/VenmoAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Version.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/VisaCheckoutCard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/WebhookNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/WebhookNotificationGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/WebhookTesting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/WebhookTestingGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Xml/Generator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/Braintree/Xml/Parser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/lib/ssl/api_braintreegateway_com.ca.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/Braintree/CreditCardDefaults.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/Braintree/CreditCardNumbers/CardTypeIndicators.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/Braintree/OAuthTestHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/Helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/SanityTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/Setup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/fixtures/bt_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/fixtures/gif_extension_bt_logo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/fixtures/malformed_pdf.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/AddOnsTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/AddressTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/ApplePayTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/ClientTokenTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/CreditCardTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/CreditCardVerificationAdvancedSearchTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/CreditCardVerificationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/CustomerAdvancedSearchTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/CustomerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/DisbursementTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/DiscountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/DisputeSearchTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/DisputeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/DocumentUploadTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/Error/ErrorCollectionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/Error/ValidationErrorCollectionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/HttpClientApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/HttpTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/IdealPaymentTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/MasterpassCardTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/MerchantAccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/MerchantTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/MultipleValueNodeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/OAuthTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/PayPalAccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/PaymentMethodNonceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/PaymentMethodTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/PaymentMethodWithUsBankAccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/PlanTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/Result/ErrorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/SettlementBatchSummaryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/SubscriptionHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/SubscriptionSearchTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/SubscriptionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/TestTransactionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/TextNodeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/TransactionAdvancedSearchTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/TransactionLineItemTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/TransactionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/TransactionWithUsBankAccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/TransparentRedirectTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/UsBankAccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/UsBankAccountVerificationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/integration/VisaCheckoutCardTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/AddOnTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/AddressTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/AuthorizationAdjustmentTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/BraintreeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/ClientApi/ClientTokenTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/ConfigurationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/CreditCardTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/CreditCardVerificationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/CustomerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/DigestTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/DisbursementDetailsTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/DisbursementTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/DiscountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/DisputeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/DocumentUploadTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/EndsWithNodeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/GatewayTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/HttpTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/InstanceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/MerchantAccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/MultipleValueNodeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/MultipleValueOrTextNodeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/OAuthAccessRevocationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/OAuthTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/PaginatedCollectionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/PayPalAccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/PaymentMethodTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/RangeNodeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/ResourceCollectionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/Result/ErrorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/Result/SuccessfulTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/SanityTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/SubscriptionSearchTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/SubscriptionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/TextNodeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/TransactionLineItemTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/TransactionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/TransparentRedirectTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/UnknownPaymentMethodTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/UsBankAccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/UsBankAccountVerificationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/UtilTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/WebhookNotificationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/Xml_GeneratorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/payment/tests/unit/Xml_ParserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Rest/AgenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Rest/AgenceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Rest/CommentairesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Rest/CommentairesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Rest/DepartsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Rest/DepartsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/DepartsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/DepartsRepository.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="635616155">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.31" value="2" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.opened" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="console" value="3" />
+          <entry key="css" value="8" />
+          <entry key="env" value="5" />
+          <entry key="gitignore" value="2" />
+          <entry key="js" value="12" />
+          <entry key="php" value="239" />
+          <entry key="twig" value="117" />
+          <entry key="yaml" value="42" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key=".env file" value="5" />
+          <entry key="CSS" value="8" />
+          <entry key="JavaScript" value="12" />
+          <entry key="PHP" value="242" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Twig" value="117" />
+          <entry key="YAML" value="42" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="113" />
+          <entry key="dummy" value="12" />
+          <entry key="env" value="60" />
+          <entry key="js" value="1443" />
+          <entry key="php" value="41504" />
+          <entry key="twig" value="14519" />
+          <entry key="yaml" value="798" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key=".env file" value="60" />
+          <entry key="CSS" value="113" />
+          <entry key="JavaScript" value="1443" />
+          <entry key="PHP" value="41504" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Twig" value="14519" />
+          <entry key="YAML" value="798" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="17" />
+          <entry key="PHP Interface.type" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="933114540">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.112" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.46" value="2" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="3" />
+          <entry key="env" value="1" />
+          <entry key="js" value="4" />
+          <entry key="php" value="107" />
+          <entry key="twig" value="63" />
+          <entry key="twig___jb_tmp___" value="1" />
+          <entry key="yaml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key=".env file" value="1" />
+          <entry key="CSS" value="3" />
+          <entry key="JavaScript" value="4" />
+          <entry key="PHP" value="107" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Twig" value="63" />
+          <entry key="YAML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="64" />
+          <entry key="js" value="56" />
+          <entry key="php" value="10962" />
+          <entry key="twig" value="3624" />
+          <entry key="yaml" value="41" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="64" />
+          <entry key="HTML" value="5" />
+          <entry key="JavaScript" value="56" />
+          <entry key="PHP" value="10957" />
+          <entry key="Twig" value="3624" />
+          <entry key="YAML" value="41" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1248528328">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.121" value="1" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.48" value="2" />
+          <entry key="project.open.time.59" value="1" />
+          <entry key="project.open.time.68" value="1" />
+          <entry key="project.open.time.71" value="1" />
+          <entry key="project.open.time.87" value="1" />
+          <entry key="project.opened" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="json" value="2" />
+          <entry key="md" value="1" />
+          <entry key="php" value="68" />
+          <entry key="sh" value="1" />
+          <entry key="twig" value="2" />
+          <entry key="yaml" value="43" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Bash" value="1" />
+          <entry key="JSON" value="2" />
+          <entry key="Markdown" value="1" />
+          <entry key="PHP" value="68" />
+          <entry key="Twig" value="2" />
+          <entry key="YAML" value="43" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="1" />
+          <entry key="json" value="2" />
+          <entry key="php" value="8586" />
+          <entry key="twig" value="51" />
+          <entry key="yaml" value="2057" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="2" />
+          <entry key="PHP" value="8586" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Twig" value="51" />
+          <entry key="YAML" value="2057" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="7" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/packages/validator.yaml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/rest/agences/cget.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes/restApi.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Rest/AgenceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#122#145#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Rest/DepartsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+              <folding>
+                <element signature="e#122#145#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/DepartsRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Departs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Rest/CommentairesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+              <folding>
+                <element signature="e#122#145#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>FormFacto</find>
+      <find>setAlertForm</find>
+      <find>form.fa</find>
+      <find>setAlertStringContent</find>
+      <find>$ci</find>
+      <find>LAST_SELECTED_AGENCE</find>
+      <find>ci</find>
+      <find>handleRalonge</find>
+      <find>setHistoryData</find>
+      <find>FormAler</find>
+      <find>getFor</find>
+      <find>$currentAgence</find>
+      <find>currentAgence</find>
+      <find>reques</find>
+      <find>dump</find>
+      <find>initRalongeForm</find>
+      <find>array</find>
+      <find>user</find>
+      <find>alertStringContent</find>
+      <find>FormDe</find>
+      <find>createDepartAdminForm</find>
+      <find>createMainForm</find>
+      <find>dum</find>
+      <find>js</find>
+      <find>getFin</find>
+      <find>fetchAllAdmins</find>
+      <find>succe</find>
+      <find>cover</find>
+      <find>ve</find>
+      <find>Collection</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Controller/InvitationController.php" />
+        <option value="$PROJECT_DIR$/templates/log_io/add_user.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/LogIOController.php" />
+        <option value="$PROJECT_DIR$/templates/one_agence/oneAgence.html.twig" />
+        <option value="$PROJECT_DIR$/templates/app/adminTool.html.twig" />
+        <option value="$PROJECT_DIR$/templates/comparateur/comparateur.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/ComparateurController.php" />
+        <option value="$PROJECT_DIR$/src/Form/FormComparateur.php" />
+        <option value="$PROJECT_DIR$/src/Form/FormDepartAdminType.php" />
+        <option value="$PROJECT_DIR$/src/Repository/AgencesRepository.php" />
+        <option value="$PROJECT_DIR$/templates/agence_admin/agenceAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AccesDeniedHandler.php" />
+        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/SubmitHandler.php" />
+        <option value="$PROJECT_DIR$/src/Controller/DepartAdminController.php" />
+        <option value="$PROJECT_DIR$/src/Form/FormAccesProvider.php" />
+        <option value="$PROJECT_DIR$/src/Controller/AppConstants.php" />
+        <option value="$PROJECT_DIR$/src/Repository/NzelaUserRepository.php" />
+        <option value="$PROJECT_DIR$/templates/one_agence/commentaire.html.twig" />
+        <option value="$PROJECT_DIR$/templates/recycled/abstractMenuNContentTemplate.html.twig" />
+        <option value="$PROJECT_DIR$/src/Repository/CommentairesRepository.php" />
+        <option value="$PROJECT_DIR$/src/Controller/OneAgenceController.php" />
+        <option value="$PROJECT_DIR$/templates/log_io/login.html.twig" />
+        <option value="$PROJECT_DIR$/templates/agences/agenceFilter.html.twig" />
+        <option value="$PROJECT_DIR$/templates/one_agence/agenceInfo.html.twig" />
+        <option value="$PROJECT_DIR$/templates/recycled/depart.html.twig" />
+        <option value="$PROJECT_DIR$/templates/depart_admin/departAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/public/assets/css/cove.css" />
+        <option value="$PROJECT_DIR$/templates/summary/appSummary.html.twig" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/AgenceAdminController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/AbstractMenuContent.php" />
+        <option value="$PROJECT_DIR$/config/routes.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/backend/AbstractMenuContent.php" />
+        <option value="$PROJECT_DIR$/config/packages/framework.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/test.json" />
+        <option value="$PROJECT_DIR$/templates/restResponses/api_agences.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/AgencesController.php" />
+        <option value="$PROJECT_DIR$/config/routes/restApi.yaml" />
+        <option value="$PROJECT_DIR$/src/Entity/Departs.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/AppNormalizer.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Agences.php" />
+        <option value="$PROJECT_DIR$/config/routes/annotations.yaml" />
+        <option value="$PROJECT_DIR$/src/Entity/Commentaires.php" />
+        <option value="$PROJECT_DIR$/templates/rest/agences/cget.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/fos_rest.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/AgenceController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/payment/BraintreePayment.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/DepartsController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/CommentairesController.php" />
+        <option value="$PROJECT_DIR$/src/Repository/DepartsRepository.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1378" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Ariv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ariv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ariv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ariv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ariv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ariv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ariv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ariv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Rest" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Ariv" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="Ariv" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\compilation\Ariv\src\Controller\Rest\payment" />
+      <recent name="D:\tmp_code\nzela_web\public\assets\images" />
+      <recent name="D:\tmp_code\nzela_web\assets\images" />
+      <recent name="D:\tmp_code\nzela_web\assets\js" />
+      <recent name="D:\tmp_code\nzela_web\assets\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\compilation\Ariv\public" />
+      <recent name="D:\compilation\Ariv\templates\rest\agences" />
+      <recent name="D:\compilation\Ariv\src\Controller\backend" />
+      <recent name="D:\compilation\newCodes\nzela_web\src\Form" />
+      <recent name="D:\tmp_code\nzela_web\public\assets\images\agences" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcecd7e2-62b6-49a6-9623-82558b2217f4" name="Default Changelist" comment="" />
+      <created>1535789437228</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535789437228</updated>
+      <workItem from="1535789443244" duration="47886000" />
+      <workItem from="1535975281638" duration="28259000" />
+      <workItem from="1536034188326" duration="27901000" />
+      <workItem from="1536124332945" duration="18670000" />
+      <workItem from="1536217591213" duration="20268000" />
+      <workItem from="1536346084598" duration="51089000" />
+      <workItem from="1536474824297" duration="6097000" />
+      <workItem from="1536516907941" duration="66711000" />
+      <workItem from="1536921689264" duration="67969000" />
+      <workItem from="1537115316439" duration="7068000" />
+      <workItem from="1537158793796" duration="70719000" />
+      <workItem from="1537624661605" duration="21470000" />
+      <workItem from="1537798521272" duration="39190000" />
+      <workItem from="1537968817937" duration="18009000" />
+      <workItem from="1538051850185" duration="29656000" />
+      <workItem from="1538699016733" duration="1862000" />
+      <workItem from="1538706054391" duration="1853000" />
+      <workItem from="1538759316422" duration="48826000" />
+      <workItem from="1539255707993" duration="8714000" />
+      <workItem from="1539269840303" duration="71610000" />
+      <workItem from="1539661304713" duration="2435000" />
+      <workItem from="1539754243967" duration="32335000" />
+      <workItem from="1541545576975" duration="1308000" />
+      <workItem from="1541547594707" duration="846000" />
+      <workItem from="1541549236240" duration="15392000" />
+      <workItem from="1541598233773" duration="912000" />
+      <workItem from="1541599193018" duration="50843000" />
+      <workItem from="1541734706545" duration="277000" />
+      <workItem from="1541735024308" duration="69059000" />
+      <workItem from="1542037824663" duration="676000" />
+      <workItem from="1542045027131" duration="143000" />
+      <workItem from="1542112751623" duration="12528000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="903894000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19271624" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32445922" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
+      <window_info anchor="bottom" x="22" y="194" width="1322" height="340" id="Terminal" order="10" weight="0.57237935" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32918552" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19271624" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32445922" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
+      <window_info anchor="bottom" x="22" y="194" width="1322" height="340" id="Terminal" order="10" visible="true" weight="0.57237935" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32918552" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/packages/vich_uploader.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/doctrine_migrations.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/dev/twig.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/dev/web_profiler.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/NzelaUserController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/bundles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/serializer/Mapping/Loader/FileLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/validator/Mapping/Loader/FileLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/translation/Loader/FileLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/config/Loader/FileLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="167" column="32" lean-forward="true" selection-start-line="167" selection-start-column="32" selection-end-line="167" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/persistence/lib/Doctrine/Common/Persistence/ObjectRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/AgencesRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/dependency-injection/ContainerAwareInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/dependency-injection/ContainerAwareTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/ControllerTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5207">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/Controller/FOSRestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AbstractMenuContent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DepartAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="62" column="6" lean-forward="true" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/test.json" />
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AgenceAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="73" column="10" lean-forward="true" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commentaires.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/fos_rest.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/validator.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rest/agences/cget.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/restApi.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/LogIOController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/AppNormalizer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="e#121#184#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/payment/CHANGELOG.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Agences.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/payment/ci.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/payment/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/payment/braintree_init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/payment/lib/Braintree/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7536">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/payment/BraintreePayment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="e#130#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/payment/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/payment/checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Location.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/CommentairesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+          <folding>
+            <element signature="e#122#145#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Departs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/AgenceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#122#145#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/DepartsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/DepartsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+          <folding>
+            <element signature="e#122#145#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

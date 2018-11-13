@@ -117,6 +117,7 @@ class DepartsRepository extends ServiceEntityRepository
             ->andWhere("d.origine = ?3")
             ->andWhere("d.destination = ?4")
             ->andWhere("d.tarifAdult <= ?5")
+            ->andWhere("d.valide = 1")
             ->setParameters(['1'=>$dateMin , '2'=>$dateMax , '3'=>$origine , '4'=>$destination , '5'=>$price])
             ->orderBy('d.id', 'DESC')
             ->getQuery()->getResult();

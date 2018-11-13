@@ -30,8 +30,8 @@ class CommentairesController extends FOSRestBundle implements ClassResourceInter
 
     /**
      *
-     * @Rest\View(statusCode=Response::HTTP_CREATED)
      * @param Request $request
+     * @Rest\View(statusCode=Response::HTTP_CREATED)
      * @return Commentaires
      */
     public function postAction(Request $request) {
@@ -41,7 +41,7 @@ class CommentairesController extends FOSRestBundle implements ClassResourceInter
          * @var $agence Agences
          */
         $agence =  $this->doctrine->getRepository(Agences::class)
-            ->find($request->get("Agence_Id"));
+            ->find($request->get("agence_id"));
 
         //TODO Validation de donnees entrant, comme l'api n'est pas public la validation du client fait l'affaire.
 
@@ -49,10 +49,16 @@ class CommentairesController extends FOSRestBundle implements ClassResourceInter
         $newComment->setAgence($agence);
         $newComment->setUserName($request->get("userName"));
         $newComment->setAvis($request->get("avis"));
-        $newComment->setCommentaire($request->get("Commentaire"));
+        $newComment->setCommentaire($request->get("commentaire"));
         $manager = $this->doctrine->getManager();
         $manager->persist($newComment);
         $manager->flush();
+        $agenceOfNewComment = $newComment->getAgence();
+        $agenceOfNewComment->setDeparts(null);
+        $agenceOfNewComment->setComments(null);
+        $agenceOfNewComment->setNzelaUsers(null);
+        $agenceOfNewComment->setInvitationTokens(null);
+        $newComment->setAgence($agenceOfNewComment);
         return $newComment;
 
     }
